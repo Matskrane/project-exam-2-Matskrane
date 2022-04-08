@@ -1,4 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300;400;500;600;700&display=swap');
+@import "../components/navbar/NavBar.module.scss";
+@import "../components/heroBanner/ImageBanner.modules";
+
 
 *{
     box-sizing: border-box;
@@ -8,7 +12,7 @@
   
 body {
     line-height: 1.6;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Anek Odia', sans-serif;
 }
   
 ul {

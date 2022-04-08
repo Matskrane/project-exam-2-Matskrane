@@ -1,13 +1,11 @@
-
 import Link from 'next/link';
 import React from 'react'
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap'
-import './_NavBar.module.scss';
 
 const NavBar = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand href='/'>Holidaize</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
