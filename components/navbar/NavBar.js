@@ -25,7 +25,7 @@ const NavBar = () => {
             </Form>
             <Nav>
               <Link href='/contact'>Contact</Link>
-              <Link href="/login">Login</Link>
+              <Link href="/login">Admin</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
