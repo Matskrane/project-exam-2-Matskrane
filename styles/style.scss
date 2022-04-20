@@ -37,3 +37,38 @@ p {
 img {
     width: 100%;
 }
+
+.section-one {
+    background-color: #B41F3A;
+    padding-bottom: 50px;
+}
+
+.section-one h2 {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    padding: 35px 0;
+}
+
+.flexbox-one {
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+    justify-content: space-between;
+    color: white;
+}
+
+.flexbox-one svg {
+    font-size: 50px;
+    text-align: center;
+}
+
+.flexbox-one p {
+    text-align: center;
+}
+
+.section-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
