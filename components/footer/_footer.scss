@@ -5,21 +5,26 @@
     margin-bottom: 100px;
 }
 
-.container-one {
+.footer a {
+    color: #333;
+}
+
+.container-footer {
     display: flex;
     margin: auto;
     max-width: 700px;
 }
 
 .about h3 {
-    border-bottom: solid #333;
-    border-width: 6px;
+    border-bottom: solid #023d8f;
+    border-width: 7px;
+    font-size: 20px;
 }
 
 .about span, .pages span {
-    background-color: #333;
+    background-color: #023d8f;
     color: #fff;
-    padding: 9px 15px;
+    padding: 2px 15px;
     letter-spacing: 3px;
 }
 
@@ -34,9 +39,10 @@
 }
 
 .pages h3 {
-    border-bottom: solid #333;
-    border-width: 6px;
+    border-bottom: solid #023d8f;
+    border-width: 7px;
     width: 200px;
+    font-size: 20px;
 }
 
 .pages li {
@@ -63,7 +69,7 @@
     padding: 0 22px;
 }
 
-.fa-instagram {
+.footer i {
     color: #3a2424;
 }
 
@@ -112,7 +118,7 @@
     }
 
 
-    .container-one {
+    .container-footer {
         width: 90%;
     }
 

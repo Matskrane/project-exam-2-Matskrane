@@ -23,22 +23,13 @@ const NavBar = () => {
               <Link href='/'>Home</Link>
               <Link href="/hotels">Hotels</Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
             <Nav>
               <Link href='/contact'>Contact</Link>
-              
+
               {auth ? (
                 <>
-                
-                <button onClick={logout}>Log out</button>
+                <Link href="/admin">Admin</Link>
+                <button className='logout-button' onClick={logout}>Log out</button>
                 </>
               ) : (
                 <Link href="/login">Login</Link>

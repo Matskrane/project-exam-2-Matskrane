@@ -1,62 +1,65 @@
-
+import { FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-    <div class="footer">
-        <div class="container-one">
-            <div class="about">
-                <h3>
-                    <span>About us</span>
-                </h3>
-                <p>We strive to sell the best preworkouts on the market and be competetive with price if not the best!</p>
-            </div>
+      <div className="footer">
+        <div className="container-footer">
+          <div className="about">
+            <h3>
+              <span>About us</span>
+            </h3>
+            <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud.
+            </p>
+          </div>
 
-            <div class="pages">
-                <h3>
-                    <span>Pages</span>
-                </h3>    
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="shoppingCart.html">My Shopping Cart</a></li>
-                        <li><a href="login.html">Login</a></li>                      
-                    </ul>
-            </div>
-
-            
-
-
+          <div className="pages">
+            <h3>
+              <span>Pages</span>
+            </h3>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="products.html">Hotels</a>
+              </li>
+              <li>
+                <a href="shoppingCart.html">Contact</a>
+              </li>
+              <li>
+                <a href="login.html">Admin</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="socials">
+      <div className="socials">
         <h4>Follow us on our social media!</h4>
         <ul>
-            <li>
-                <a href="https://www.facebook.com/mats.liankrane">
-                    <i class="fa fa-facebook"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/matskrane/">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/channel/UC3hRmO1Pm3PTbf38-_8cmtA">
-                    <i class="fa fa-youtube"></i>
-                </a>
-            </li>
+          <li>
+            <a href="https://www.facebook.com/mats.liankrane">
+              <i><FaInstagram /></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/matskrane/">
+              <i><FaFacebookSquare /></i>
+            </a>
+          </li>
         </ul>
-    </div>
+      </div>
 
-    <div class="copyright">
-        <p>© 2021 | Preworkout | All Rights Reserved</p>
-        <p>Swole is the goal, size is the price</p>
-    </div>
+      <div className="copyright">
+        <p>© 2021 | Holidaize | All Rights Reserved</p>
+        <p>Best deals xD</p>
+      </div>
     </>
-  )
+  );
 }
 
 export default Footer;
