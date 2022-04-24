@@ -6,7 +6,8 @@ const Hotels = ({ hotels }) => {
   return (
     <div className="container">
       {hotels.map((hotel, idx) => {
-        const { name, id } = hotel.attributes;
+        const { name } = hotel.attributes;
+        const { id } = hotel;
         return ( 
         <Link key={idx} passHref href={`/hotels/${id}`}>
           <div>

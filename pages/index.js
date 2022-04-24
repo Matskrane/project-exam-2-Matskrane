@@ -1,5 +1,6 @@
 import { HiWifi } from "react-icons/hi";
 import { MdOutlineStar, MdQuickreply } from "react-icons/md";
+import FeaturedHotels from "../components/FeaturedHotels";
 import HeroBanner from "../components/heroBanner/HeroBanner";
 
 
@@ -29,6 +30,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <FeaturedHotels />
     </>
   );
 }

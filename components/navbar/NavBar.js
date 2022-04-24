@@ -1,8 +1,17 @@
 import Link from 'next/link';
-import React from 'react'
-import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import Router  from 'next/router';
+import React, { useContext } from 'react'
+import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import AuthContext from '../context/AuthContext';
 
 const NavBar = () => {
+  const [ auth, setAuth ] = useContext(AuthContext)
+
+  function logout() {
+    setAuth(null);
+    Router.push("/");
+  }
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg">
@@ -25,7 +34,16 @@ const NavBar = () => {
             </Form>
             <Nav>
               <Link href='/contact'>Contact</Link>
-              <Link href="/login">Admin</Link>
+              
+              {auth ? (
+                <>
+                
+                <button onClick={logout}>Log out</button>
+                </>
+              ) : (
+                <Link href="/login">Login</Link>
+              )}
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
