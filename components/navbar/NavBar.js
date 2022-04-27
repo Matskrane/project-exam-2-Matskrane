@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Router  from 'next/router';
 import React, { useContext } from 'react'
-import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import AuthContext from '../context/AuthContext';
 
 const NavBar = () => {

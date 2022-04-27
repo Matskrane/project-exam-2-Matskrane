@@ -25,7 +25,7 @@ export default function Home() {
             </div>
             <div className="section-icons">
               <MdQuickreply /> 
-            <p>Quick and easy ff15</p>
+            <p>Quick customer service</p>
             </div>
           </div>
         </div>
