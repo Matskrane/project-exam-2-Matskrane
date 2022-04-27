@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaInstagram, FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
@@ -22,16 +23,16 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+              <Link href='/'>Home</Link>
               </li>
               <li>
-                <a href="products.html">Hotels</a>
+              <Link href="/hotels">Hotels</Link>
               </li>
               <li>
-                <a href="shoppingCart.html">Contact</a>
+              <Link href="/contact">Contact</Link>
               </li>
               <li>
-                <a href="login.html">Admin</a>
+              <Link href="/admin">Admin</Link>
               </li>
             </ul>
           </div>
