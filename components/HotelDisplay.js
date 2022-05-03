@@ -1,11 +1,9 @@
 import axios from "axios";
 import Link from "next/link";
-import SearchBar from "../../components/searchBar/SearchBar";
-import {HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../constants/api";
 
-const Hotels = ({ hotels }) => {
+const HotelDisplay = ({ hotels }) => {
   return (
-    
     <div className="container">
       {hotels.map((hotel, idx) => {
         const { name } = hotel.attributes;
@@ -18,7 +16,6 @@ const Hotels = ({ hotels }) => {
         </Link>
         )
       })}
-      <SearchBar placeholder="Enter a Book Name..." data={hotels}/>
     </div>
   )
 }
@@ -41,4 +38,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Hotels;
+export default HotelDisplay;
