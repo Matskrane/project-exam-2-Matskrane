@@ -10,10 +10,10 @@ function SearchBar({ placeholder, data }) {
   const [wordEntered, setWordEntered] = useState("");
 
   const handleFilter = (event) => {
-    const searchWord = event.target.hotels;
+    const searchWord = event.target.value;
     setWordEntered(searchWord);
-    const newFilter = data.filter((hotel) => {
-      return hotel.attributes.name.includes(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.attributes.name.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     

@@ -3,7 +3,7 @@ import Link from "next/link";
 import SearchBar from "../../components/searchBar/SearchBar";
 import {HOTELS_URL } from "../../constants/api";
 
-const Hotels = ({ hotels }) => {
+const Hotels = ({ hotels, filteredData }) => {
   return (
     
     <div className="container">
@@ -18,7 +18,7 @@ const Hotels = ({ hotels }) => {
         </Link>
         )
       })}
-      <SearchBar placeholder="Enter a Book Name..." data={hotels}/>
+      <SearchBar placeholder="Hotel name" data={hotels}/>
     </div>
   )
 }
