@@ -6,6 +6,8 @@ import Router from 'next/router';
 import { UserLoginSchema } from '../../components/schemas/LoginSchema';
 import { AUTH_URL, BASE_URL } from '../../constants/api';
 import AuthContext from '../../components/context/AuthContext';
+import { HOTELS_URL } from "../../constants/api";
+
 
 
 const Login = () => {
@@ -54,5 +56,23 @@ const Login = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  
+  let hotels = []
+
+  try {
+    const response = await axios.get(HOTELS_URL);
+    hotels = response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      hotels: hotels,
+    },
+  };
+}
 
 export default Login;

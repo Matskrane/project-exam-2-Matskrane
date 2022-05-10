@@ -3,9 +3,10 @@ import Link from "next/link";
 import SearchBar from "../../components/searchBar/SearchBar";
 import {HOTELS_URL } from "../../constants/api";
 
-const Hotels = ({ hotels, filteredData }) => {
+const Hotels = ({ hotels }) => {
   return (
-    
+    <>
+    <SearchBar placeholder="Hotel name" hotels={hotels}/>
     <div className="container">
       {hotels.map((hotel, idx) => {
         const { name } = hotel.attributes;
@@ -18,13 +19,14 @@ const Hotels = ({ hotels, filteredData }) => {
         </Link>
         )
       })}
-      <SearchBar placeholder="Hotel name" data={hotels}/>
+      
     </div>
+    </>
   )
 }
 
 export async function getStaticProps() {
-
+  
   let hotels = [];
 
   try {

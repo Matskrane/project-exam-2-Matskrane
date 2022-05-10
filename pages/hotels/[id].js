@@ -45,4 +45,4 @@ export async function getStaticPaths() {
   }
 }
   
-  export default Hotel;
+export default Hotel;

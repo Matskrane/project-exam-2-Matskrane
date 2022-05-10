@@ -2,16 +2,20 @@ import { HiWifi } from "react-icons/hi";
 import { MdOutlineStar, MdQuickreply } from "react-icons/md";
 import FeaturedHotels from "../components/FeaturedHotels";
 import HeroBanner from "../components/heroBanner/HeroBanner";
+import axios from 'axios';
+import { HOTELS_URL } from "../constants/api";
+import SearchBar from "../components/searchBar/SearchBar";
 
 
 
-
-export default function Home() {
+const Home = ({ hotels }) => {
   return (
     <>
+    <SearchBar placeholder="Hotel name" hotels={hotels}/>
       <HeroBanner />
       
-      <div className="section-one">
+  
+      <div className="section-one-icons">
         <div className="container-one">
           <h2>Why should you book with us  ?</h2>
           <div className="flexbox-one">
@@ -35,3 +39,24 @@ export default function Home() {
     </>
   );
 }
+
+
+export async function getStaticProps() {
+  
+  let hotels = []
+
+  try {
+    const response = await axios.get(HOTELS_URL);
+    hotels = response.data.data;
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      hotels: hotels,
+    },
+  };
+}
+
+export default Home;

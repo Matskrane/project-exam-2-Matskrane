@@ -1,6 +1,7 @@
+import { borderBottom } from '@mui/system';
 import Link from 'next/link';
 import Router  from 'next/router';
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import AuthContext from '../context/AuthContext';
 
@@ -20,10 +21,11 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Link href='/'>Home</Link>
-              <Link href="/hotels">Hotels</Link>
-            </Nav>
-            <Nav>
+              <Link
+              
+              href='/'>Home</Link>
+              <Link
+               href="/hotels">Hotels</Link>
               <Link href='/contact'>Contact</Link>
 
               {auth ? (
@@ -34,7 +36,6 @@ const NavBar = () => {
               ) : (
                 <Link href="/login">Login</Link>
               )}
-              
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -43,4 +44,5 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+
+export default NavBar;

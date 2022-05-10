@@ -7,7 +7,15 @@ import { AuthProvider } from '../components/context/AuthContext';
 
 
 
+
+
+
+
+
+
+
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
     <AuthProvider>
@@ -17,6 +25,9 @@ function MyApp({ Component, pageProps }) {
     </AuthProvider>
     </>
   )
+  
 }
 
+
 export default MyApp
+

@@ -1,22 +1,23 @@
 import { useState } from "react";
 import Link from "next/link";
-import { MdSearch, MdSearchOff } from "react-icons/md";
+import SearchIcon from '@mui/icons-material/Search';
+import SearchOffIcon from '@mui/icons-material/SearchOff';
 
 
-function SearchBar({ placeholder, data }) {
-  
+function SearchBar({ placeholder, hotels }) {
   
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
+  
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
+    const newFilter = hotels.filter((value) => {
       return value.attributes.name.toLowerCase().includes(searchWord.toLowerCase());
     });
-
     
+
 
     if (searchWord === "") {
       setFilteredData([]);
@@ -24,6 +25,7 @@ function SearchBar({ placeholder, data }) {
       setFilteredData(newFilter);
     }
   };
+  
 
   const clearInput = () => {
     setFilteredData([]);
@@ -41,32 +43,33 @@ function SearchBar({ placeholder, data }) {
         />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <MdSearch />
+            <SearchIcon />
           ) : (
-            <MdSearchOff id="clearBtn" onClick={clearInput} />
+            <SearchOffIcon id="clearBtn" onClick={clearInput} />
           )}
         </div>
       </div>
       {filteredData.length != 0 && (
+        <div className="dataResult-centered">
         <div className="dataResult">
           {filteredData.map((hotel, idx) => {
             const { name } = hotel.attributes;
             const { id } = hotel;
             return ( 
-            <Link key={idx} passHref href={`/hotels/${id}`}>
-              <div>
+            <Link  key={idx} passHref href={`/hotels/${id}`}>
+              <div className="dataItem">
                 <h2>{name}</h2>
               </div>
             </Link>
             )
           })}
         </div>
+        </div>
       )}
     </div>
   );
 }
 
+
 export default SearchBar;
 
-
-// <SearchBox data={results} />

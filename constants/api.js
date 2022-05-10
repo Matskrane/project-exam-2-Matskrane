@@ -1,6 +1,6 @@
 export const BASE_URL = "https://krane-hotel-api.herokuapp.com/";
-export const HOTELS_URL = "http://localhost:1338/api/hotels";
-export const HOTELS_ID = "https://krane-hotel-api.herokuapp.com/api/hotels"
+export const HOTELS_URL = "https://krane-hotel-api.herokuapp.com/api/hotels";
+export const HOTELS_ID = "https://krane-hotel-api.herokuapp.com/api/hotels";
 
 
 // Login
