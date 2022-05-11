@@ -7,10 +7,11 @@ import { UserLoginSchema } from '../../components/schemas/LoginSchema';
 import { AUTH_URL, BASE_URL } from '../../constants/api';
 import AuthContext from '../../components/context/AuthContext';
 import { HOTELS_URL } from "../../constants/api";
+import SearchBar from '../../components/searchBar/SearchBar';
 
 
 
-const Login = () => {
+const Login = ({ hotels }) => {
   
   const [auth, setAuth] = useContext(AuthContext);
 
@@ -38,8 +39,10 @@ const Login = () => {
 
   return (
     <>
+    <SearchBar hotels={hotels}/>
+    <div className='login-border'>
+    <div className='login-container'>
     <h1>Login for Admins</h1>
-    <p>If you are an Admin you can log in here to view messages and create new establishments </p>
       <form onSubmit={handleSubmit(onSubmit)}>
 
         <input {...register('email')} placeholder='Your email...' />
@@ -53,9 +56,13 @@ const Login = () => {
         <button>Send</button>
 
       </form>
+      </div>
+      </div>
     </>
   );
 };
+
+
 
 export async function getStaticProps() {
   

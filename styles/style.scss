@@ -159,7 +159,7 @@ input:focus {
 .dataResult {
   margin-top: -25px;
   width: 350px;
-  height: 200px;
+  height: auto;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   overflow: hidden;
@@ -195,4 +195,62 @@ input:focus {
 
 #clearBtn {
   cursor: pointer;
+}
+
+.login-container {
+  margin: 100px 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #085c9c;
+  border-radius: 15px;
+}
+
+.login-container h1 {
+  padding: 15px 0;
+  color: white;
+}
+
+.login-border {
+  max-width: 600px;
+  margin: auto;
+
+}
+
+.login-container form {
+  display: grid;
+}
+
+.login-container input {
+  margin: 10px 0;
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.login-container button {
+  width: 200px;
+  margin: 20px auto;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(26, 26, 26);
+  color: whitesmoke;
+}
+
+.login-container span {
+  text-align: center;
+  font-size: 20px;
+}
+
+.login-container textarea {
+  width: 350px;
+  margin: auto;
+  height: 150px;
+  font-size: 30px;
+  padding: 5px;
 }
