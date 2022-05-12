@@ -5,73 +5,87 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
-import { CONTACT_SCHEMA } from "../../components/schemas/LoginSchema";
+import * as yup from "yup";
+import { Contact_Schema } from "../../components/schemas/LoginSchema";
+
 
 
 const Contact = ({ hotels }) => {
-
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState(null);
-  const [sent, setSent] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(CONTACT_SCHEMA),
+    resolver: yupResolver(Contact_Schema),
   });
 
-  async function onSubmit() {
-    setSubmitting(true);
-    setError(null);
+
+  const [success, setSuccess] = useState("");
+
+  async function sendForm(data) {
+    event.preventDefault();
+    const options = {
+      data: {
+        message: data.message,
+      },
+    };
+
+    console.log(data);
+
+    
 
     try {
-      const response = await axios.post(CONTACT_URL);
-      console.log(response)
-      setSubmitting(false);
-      setSent(true);
+      const res = await axios.post(CONTACT_URL, options, {       
+        message: data.message,
+      });
+      console.log(data)
     } catch (error) {
-      setError(error.toString());
+      console.log(error);
+    } finally {
+      setSuccess("Your message is sent!");
+
+      //setTimeout(() => {
+      //  window.location.reload();
+      //}, 2000);
     }
   }
+
   return (
     <>
       <SearchBar placeholder="Hotel name" hotels={hotels} />
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-
-        <input type="text" placeholder="Name *" {...register("name")} />
-        {errors.name && <error>{errors.name.message}</error>}
-
-        <input type="email" placeholder="Email *" {...register("email")} />
-        {errors.email && <error>{errors.email.message}</error>}
-
-        <textarea
-          as="textarea"
-          placeholder="Message *"
-          rows={3}
-          {...register("message")}
-        />
-        {errors.message && <error>{errors.message.message}</error>}
-
+      <form onSubmit={handleSubmit(sendForm)} >
         
-        {sent && <p>Thank you for your message</p>}
-        <button
-          type="submit"
-          disabled={(error && true) || (sent && true) || false}
-          
-          
-        >
-          {(sent && "Sent") ||
-            (error && "Error") ||
-            (submitting && "Sending..") ||
-            "Send"}
-        </button>
-      </form>
+
+              <div>
+                <textarea name="message" {...register("message")}  placeholder="Enter your message"></textarea>
+                {errors.message && <span>{errors.message.message}</span>}
+              </div>
+
+              <button>Send Form</button>
+              <div></div>
+              <div>
+                <p> {success} </p>
+              </div>
+            </form>
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export async function getStaticProps() {
   
