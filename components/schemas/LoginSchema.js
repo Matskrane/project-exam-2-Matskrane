@@ -8,5 +8,7 @@ export const UserLoginSchema = yup.object().shape({
 
 
 export const Contact_Schema = yup.object().shape({
+  name: yup.string().required("Please enter your name.").min(3, `Must be at least 3 characters.`),
+  email: yup.string().required("Please enter your email address.").email("Please enter a valid email address."),
   message: yup.string().required("Enter your message").min(10, "The message must be at least 10 characters"),
 });
