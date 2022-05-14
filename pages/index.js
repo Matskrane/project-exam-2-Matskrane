@@ -5,37 +5,66 @@ import HeroBanner from "../components/heroBanner/HeroBanner";
 import axios from 'axios';
 import { HOTELS_URL } from "../constants/api";
 import SearchBar from "../components/searchBar/SearchBar";
+import Link from "next/link";
+import { Card, ListGroup, ListGroupItem} from "react-bootstrap";
+import Image from "next/image";
 
 
 
 const Home = ({ hotels }) => {
   return (
     <>
-    <SearchBar placeholder="Hotel name" hotels={hotels}/>
+      <SearchBar placeholder="Hotel name" hotels={hotels} />
       <HeroBanner />
-      
-  
+
       <div className="section-one-icons">
         <div className="container-one">
-          <h2>Why should you book with us  ?</h2>
+          <h2>Why should you book with us ?</h2>
           <div className="flexbox-one">
             <div className="section-icons">
               <HiWifi />
-            <p>Free Wi-Fi at all of our hotels</p>
+              <p>Free Wi-Fi at all of our hotels</p>
             </div>
             <div className="section-icons">
               <MdOutlineStar />
-            <p>Great reviews!</p>
+              <p>Great reviews!</p>
             </div>
             <div className="section-icons">
-              <MdQuickreply /> 
-            <p>Quick customer service</p>
+              <MdQuickreply />
+              <p>Quick customer service</p>
             </div>
           </div>
         </div>
       </div>
 
-      <FeaturedHotels />
+      <div className="container-hotels">
+        {hotels.map((hotel, idx) => {
+          const { name, image_url, price, rating } = hotel.attributes;
+          const { id } = hotel;
+          return (
+            <Link key={idx} passHref href={`/hotels/${id}`}>
+              <Card style={{ width: "18rem" }}>
+                <Image width={250} height={150} src={image_url}></Image>
+
+                <Card.Body>
+                  <Card.Title>{name}</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+                <ListGroup className="list-group-flush">
+                  <ListGroupItem className="price">{price}</ListGroupItem>
+                  <ListGroupItem>{rating}</ListGroupItem>
+                </ListGroup>
+                <Card.Body>
+                  <Card.Link href="#">Book this hotel</Card.Link>
+                </Card.Body>
+              </Card>
+            </Link>
+          );
+        })}
+      </div>
     </>
   );
 }

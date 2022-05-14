@@ -53,12 +53,13 @@ function SearchBar({ placeholder, hotels }) {
         <div className="dataResult-centered">
         <div className="dataResult">
           {filteredData.map((hotel, idx) => {
-            const { name } = hotel.attributes;
+            const { name, adress } = hotel.attributes;
             const { id } = hotel;
             return ( 
             <Link  key={idx} passHref href={`/hotels/${id}`}>
               <div className="dataItem">
                 <h2>{name}</h2>
+                <p>{adress}</p>
               </div>
             </Link>
             )

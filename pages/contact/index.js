@@ -36,7 +36,9 @@ const Contact = ({ hotels }) => {
     
 
     try {
-      const res = await axios.post(CONTACT_URL, options, {       
+      const res = await axios.post(CONTACT_URL, options, {      
+        name: data.name,
+        email: data.email, 
         message: data.message,
       });
       console.log(data)
@@ -55,13 +57,19 @@ const Contact = ({ hotels }) => {
     <>
       <SearchBar placeholder="Hotel name" hotels={hotels} />
 
-      <form onSubmit={handleSubmit(sendForm)} >
-        
 
-              <div>
+      <div className='login-border'>
+      <div className='login-container'>
+      <h1>Contact</h1>
+      <p>If you have any questions feel free to contact us here</p>
+      <form onSubmit={handleSubmit(sendForm)} >
+
+                <input type="text" {...register("name")} placeholder="Full Name" />
+                {errors.name && <span className>{errors.name.message}</span>}
+                <input type="text" {...register("email")} placeholder="Your Email" />
+                {errors.email && <span>{errors.email.message}</span>}
                 <textarea name="message" {...register("message")}  placeholder="Enter your message"></textarea>
                 {errors.message && <span>{errors.message.message}</span>}
-              </div>
 
               <button>Send Form</button>
               <div></div>
@@ -69,6 +77,8 @@ const Contact = ({ hotels }) => {
                 <p> {success} </p>
               </div>
             </form>
+            </div>
+            </div>
     </>
   );
 }

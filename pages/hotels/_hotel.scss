@@ -1,0 +1,11 @@
+
+.container-hotels {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    margin-top: 50px;
+}
