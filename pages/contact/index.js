@@ -5,8 +5,7 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
-import * as yup from "yup";
-import { Contact_Schema } from "../../components/schemas/LoginSchema";
+import { Contact_Schema } from "../../components/schemas/yupSchemas";
 
 
 

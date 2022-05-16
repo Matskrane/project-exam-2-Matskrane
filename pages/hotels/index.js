@@ -29,7 +29,7 @@ const Hotels = ({ hotels }) => {
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem className="price">{price}</ListGroupItem>
+    <ListGroupItem className="price">Price {price} kr</ListGroupItem>
     <ListGroupItem>{rating}</ListGroupItem>
   </ListGroup>
   <Card.Body>

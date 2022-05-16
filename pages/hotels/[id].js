@@ -1,13 +1,18 @@
 import axios from "axios";
+import BookingsForm from "../../components/bookingForm/Booking";
 import { HOTELS_ID } from "../../constants/api";
 
 
 const Hotel = ({ hotels }) => {
     const { name } = hotels.attributes; 
     return (
+      <>
       <div className="specific-sauce">
         <h1>Name: {name}</h1>
       </div>
+
+      <BookingsForm />
+      </>
     );
   };
   

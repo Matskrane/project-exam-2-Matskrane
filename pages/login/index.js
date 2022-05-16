@@ -3,11 +3,11 @@ import { useContext } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import Router from 'next/router';
-import { UserLoginSchema } from '../../components/schemas/LoginSchema';
 import { AUTH_URL, BASE_URL } from '../../constants/api';
 import AuthContext from '../../components/context/AuthContext';
 import { HOTELS_URL } from "../../constants/api";
 import SearchBar from '../../components/searchBar/SearchBar';
+import { UserLoginSchema } from '../../components/schemas/yupSchemas';
 
 
 
