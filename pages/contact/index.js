@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { Contact_Schema } from "../../components/schemas/yupSchemas";
+import Head from "next/head";
 
 
 
@@ -54,7 +55,11 @@ const Contact = ({ hotels }) => {
 
   return (
     <>
-      <SearchBar placeholder="Hotel name" hotels={hotels} />
+    <Head>
+      <title>Contact</title>
+      <meta property='title' />
+    </Head>    
+    <SearchBar placeholder="Hotel name" hotels={hotels} />
 
 
       <div className='login-border'>
@@ -70,7 +75,7 @@ const Contact = ({ hotels }) => {
                 <textarea name="message" {...register("message")}  placeholder="Enter your message"></textarea>
                 {errors.message && <span>{errors.message.message}</span>}
 
-              <button>Send Form</button>
+              <button>Submit</button>
               <div></div>
               <div>
                 <p> {success} </p>

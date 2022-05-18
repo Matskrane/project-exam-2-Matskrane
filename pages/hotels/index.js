@@ -4,10 +4,15 @@ import { Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import SearchBar from "../../components/searchBar/SearchBar";
 import {HOTELS_URL } from "../../constants/api";
 import Image from 'next/image';
+import Head from "next/head";
 
 const Hotels = ({ hotels }) => {
   return (
     <>
+    <Head>
+      <title>Hotels</title>
+      <meta property='title' />
+    </Head>    
     <SearchBar placeholder="Hotel name" hotels={hotels}/>
 
 

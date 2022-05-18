@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from 'react';
 import useAxios from "../../hooks/UseAxios";
 import useToggle from "../../hooks/UseToggle";
 import AuthContext from "../../components/context/AuthContext";
+import Head from "next/head";
 
 
 const Admin = () => {
@@ -56,7 +57,14 @@ const Admin = () => {
   }
 
   return (
+    <>
+    <Head>
+    <title>Admin</title>
+    <meta property='title' />
+    </Head>
+
     <div>Logged in</div>
+    </>
   )
 }
 

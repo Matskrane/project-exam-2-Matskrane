@@ -8,6 +8,7 @@ import AuthContext from '../../components/context/AuthContext';
 import { HOTELS_URL } from "../../constants/api";
 import SearchBar from '../../components/searchBar/SearchBar';
 import { UserLoginSchema } from '../../components/schemas/yupSchemas';
+import Head from "next/head";
 
 
 
@@ -39,6 +40,10 @@ const Login = ({ hotels }) => {
 
   return (
     <>
+    <Head>
+      <title>Login</title>
+      <meta property='title' />
+    </Head>
     <SearchBar hotels={hotels}/>
     <div className='login-border'>
     <div className='login-container'>

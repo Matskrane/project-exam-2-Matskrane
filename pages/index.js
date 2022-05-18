@@ -1,6 +1,5 @@
 import { HiWifi } from "react-icons/hi";
 import { MdOutlineStar, MdQuickreply } from "react-icons/md";
-import FeaturedHotels from "../components/FeaturedHotels";
 import HeroBanner from "../components/heroBanner/HeroBanner";
 import axios from 'axios';
 import { HOTELS_URL } from "../constants/api";
@@ -8,12 +7,19 @@ import SearchBar from "../components/searchBar/SearchBar";
 import Link from "next/link";
 import { Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import Image from "next/image";
+import Head from "next/head";
+
 
 
 
 const Home = ({ hotels }) => {
   return (
     <>
+    <Head>
+      <title>Home</title>
+      <meta property='title' />
+    </Head>
+
       <SearchBar placeholder="Hotel name" hotels={hotels} />
       <HeroBanner />
 

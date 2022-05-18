@@ -1,20 +1,59 @@
 import axios from "axios";
 import BookingsForm from "../../components/bookingForm/Booking";
-import { HOTELS_ID } from "../../constants/api";
+import { BOOKING_URL, HOTELS_ID } from "../../constants/api";
+import Head from 'next/head';
 
 
 const Hotel = ({ hotels }) => {
-    const { name } = hotels.attributes; 
+    const { name, id, date_checkin, date_checkout } = hotels.attributes; 
+
+    const sendBooking = async (formData) => {
+      const options = {
+        data: {
+          message: formData.message,
+          beds: formData.beds,
+        },
+      };
+      const responseData = await axios.post(BOOKING_URL, options);
+      console.log(responseData);
+    };
+
     return (
       <>
+      <Head>
+        <title>{name}</title>
+        <meta property='title' key={id} />
+      </Head>
+
+
       <div className="specific-sauce">
         <h1>Name: {name}</h1>
       </div>
 
-      <BookingsForm />
+      <BookingsForm sendBooking={sendBooking} />
       </>
     );
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 export async function getStaticProps({ params }) {
   const url = `${HOTELS_ID}/${params.id}`

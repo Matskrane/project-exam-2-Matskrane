@@ -112,9 +112,6 @@ img {
     padding: 50px 0;
 }
 
-.card {
-    box-shadow: rgba(13, 6, 141, 0.3) 0px 6px 12px -1px, rgba(7, 71, 150, 0.5) 2px 3px 7px 3px;
-}
 
 
 // Search Bar
@@ -184,6 +181,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   color: black;
+  cursor: pointer;
 }
 
 .dataItem h2 {
@@ -196,7 +194,7 @@ input:focus {
   margin-top: -14px;
 }
 
-.dataResult h2:hover {
+.dataItem:hover {
   background-color: lightgrey;
 }
 
@@ -240,19 +238,19 @@ input:focus {
   margin: 10px 0;
   width: 300px;
   height: 40px;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px;
 }
 
 .login-container button {
   width: 200px;
-  margin: 20px auto;
+  margin: 20px 0;
   height: 50px;
   font-size: 30px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgb(26, 26, 26);
+  background-color: #0d91fd;
   color: whitesmoke;
 }
 
@@ -263,8 +261,9 @@ input:focus {
 
 .login-container textarea {
   width: 350px;
-  margin: auto;
+  padding: 5px 10px;
   height: 150px;
-  font-size: 30px;
-  padding: 5px;
+  font-size: 20px;
+  outline: none;
+  resize: none;
 }
