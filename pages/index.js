@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import Image from "next/image";
 import Head from "next/head";
+import Hotels from "./hotels";
 
 
 
@@ -50,7 +51,7 @@ const Home = ({ hotels }) => {
           return (
             <Link key={idx} passHref href={`/hotels/${id}`}>
               <Card style={{ width: "18rem" }}>
-                <Image width={250} height={150} src={image_url}></Image>
+                <Image width={250} height={180} src={image_url}></Image>
 
                 <Card.Body>
                   <Card.Title>{name}</Card.Title>
@@ -60,17 +61,20 @@ const Home = ({ hotels }) => {
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroupItem className="price">{price}</ListGroupItem>
+                  <ListGroupItem className="price">
+                    Price {price} kr
+                  </ListGroupItem>
                   <ListGroupItem>{rating}</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Book this hotel</Card.Link>
+                  <Card.Link href="#">Book here</Card.Link>
                 </Card.Body>
               </Card>
             </Link>
           );
         })}
       </div>
+
     </>
   );
 }
@@ -90,7 +94,7 @@ export async function getStaticProps() {
   return {
     props: {
       hotels: hotels,
-    },
+    }
   };
 }
 

@@ -40,6 +40,10 @@ img {
     width: 100%;
 }
 
+.logo-image {
+  border-radius: 50%;
+}
+
 .section-one-icons {
   padding-bottom: 50px;
   padding-top: 30px;
@@ -240,6 +244,9 @@ input:focus {
   height: 40px;
   font-size: 20px;
   padding: 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .login-container button {
@@ -255,8 +262,11 @@ input:focus {
 }
 
 .login-container span {
-  text-align: center;
+  color: rgb(255, 106, 0);
   font-size: 20px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .login-container textarea {
@@ -266,4 +276,7 @@ input:focus {
   font-size: 20px;
   outline: none;
   resize: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }

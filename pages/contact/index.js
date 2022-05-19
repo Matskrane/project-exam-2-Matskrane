@@ -27,6 +27,8 @@ const Contact = ({ hotels }) => {
     event.preventDefault();
     const options = {
       data: {
+        name: data.name,
+        email: data.email,
         message: data.message,
       },
     };
@@ -47,9 +49,9 @@ const Contact = ({ hotels }) => {
     } finally {
       setSuccess("Your message is sent!");
 
-      //setTimeout(() => {
-      //  window.location.reload();
-      //}, 2000);
+      setTimeout(() => {
+      window.location.reload();
+      }, 2000);
     }
   }
 
@@ -76,7 +78,6 @@ const Contact = ({ hotels }) => {
                 {errors.message && <span>{errors.message.message}</span>}
 
               <button>Submit</button>
-              <div></div>
               <div>
                 <p> {success} </p>
               </div>
@@ -115,7 +116,7 @@ export async function getStaticProps() {
   return {
     props: {
       hotels: hotels,
-    },
+    }
   };
 }
 

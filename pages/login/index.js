@@ -33,7 +33,6 @@ const Login = ({ hotels }) => {
   };
 
   const onSubmit = (formData) => {
-    // console.log('Form Data: ', formData);
     userLogin(formData).catch(console.error);
     console.log(auth);
   };
@@ -44,7 +43,7 @@ const Login = ({ hotels }) => {
       <title>Login</title>
       <meta property='title' />
     </Head>
-    <SearchBar hotels={hotels}/>
+    <SearchBar placeholder="Hotel name" hotels={hotels}/>
     <div className='login-border'>
     <div className='login-container'>
     <h1>Login for Admins</h1>

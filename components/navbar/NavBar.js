@@ -1,9 +1,9 @@
-
 import Link from 'next/link';
 import Router  from 'next/router';
 import { useContext } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import AuthContext from '../context/AuthContext';
+import Image from "next/image";
 
 
 
@@ -20,6 +20,7 @@ const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="lg">
         <Container>
+          <Image className='logo-image' width={50} height={50} src="/hotel-logo.jpg"></Image>
           <Navbar.Brand href='/'>Holidaize</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

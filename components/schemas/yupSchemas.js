@@ -14,9 +14,11 @@ export const Contact_Schema = yup.object().shape({
 });
 
 
+
 export const bookingSchema = yup.object().shape({
+  message: yup.string().required(),
   message: yup.string().required('Please provide a message'),
-  beds: yup
-    .string()
-    .required('Please provide an email so we can contact you'),
+  beds: yup.string().required('Please select beds'),
+  date_checkin: yup.string().required('Please select date'),
+  date_checkout: yup.string().required('Please select date'),
 });
