@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-// This is a raw copy from previous lessons
-
 export const useLocalStorage = (key, initialValue) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
@@ -35,6 +33,7 @@ export const useLocalStorage = (key, initialValue) => {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
+      
     } catch (error) {
       // A more advanced implementation would handle the error case
       console.log(error);

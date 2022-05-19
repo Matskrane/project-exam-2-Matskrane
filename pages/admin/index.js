@@ -1,75 +1,82 @@
-import { BOOKING_URL, HOTELS_URL } from "../../constants/api";
+import { BOOKING_URL, CONTACT_URL, HOTELS_URL } from "../../constants/api";
 import axios from "axios";
 import { useEffect, useState, useContext } from 'react';
 import useAxios from "../../hooks/UseAxios";
-import useToggle from "../../hooks/UseToggle";
 import AuthContext from "../../components/context/AuthContext";
 import Head from "next/head";
+import SearchBar from "../../components/searchBar/SearchBar";
+import Link from "next/link";
 
 
-const Admin = () => {
-
-  const [isTriggered, setIsTriggered] = useToggle();
-  const [error, setError] = useState();
+const Admin = ({ hotels }) => {
+  
   const [bookings, setBookings] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
+  //const [contacts, setContacts] = useState([]);
   const [auth] = useContext(AuthContext);
+  const http = useAxios();
 
   useEffect(() => {
-    setIsLoading(true);
     const fetchData = async () => {
-      const data = await useAxios.get(BOOKING_URL);
+      const data = await http.get(BOOKING_URL);
+      //const contacts = await http.get(CONTACT_URL);
       setBookings(data.data.data);
-      setIsLoading(false);
+      //setContacts(contacts.data.data);
     };
 
-    fetchData().catch((error) => setError(error.response.data.error));
-  }, [isTriggered, auth]);
+    fetchData()
+  }, [auth]);
 
-  const sendBooking = async (formData) => {
-    const options = {
-      data: {
-        title: formData.title,
-        message: formData.message,
-        contact: formData.contact,
-      },
-    };
-    const responseData = await http.post(BOOKING_URL, options);
-    console.log(responseData);
-    setIsTriggered();
-  };
 
-  // if error object is populated, show user what happened and urge them to login
-  if (error) {
+  if (!auth) {
     return (
-      <div>
-        <h1>You must be Authenticated to view this page</h1>
-        <h3>The server responded with: {error.status}</h3>
-        <p>{error.message}</p>
-        <p>Please Login</p>
-      </div>
+        <h1>You must be Logged in to view this page</h1>
     );
   }
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
+ 
   return (
     <>
     <Head>
     <title>Admin</title>
     <meta property='title' />
     </Head>
+    <SearchBar hotels={hotels} />
 
-    <div>Logged in</div>
+    <h1>Welcome Admin</h1>
+
+    {bookings.map((booking, idx) => {
+      const { message } = booking.attributes;
+          const deleteBooking = async () => {
+            const data = await http.delete(
+              `${BOOKING_URL}/${booking.id}`
+            );
+            console.log(data);
+          };
+
+          const handleDelete = () => {
+            if (window.confirm('Are you sure?')) {
+              deleteBooking();
+              setTimeout(() => {
+                window.location.reload();
+              }, 0);
+            } else {
+              return;
+            }
+          };
+          
+          return (
+            <div key={idx}>
+            <p>{message}</p>
+            <button onClick={handleDelete}>Delete</button>
+            </div>
+          );
+    })}
     </>
-  )
-}
+  );
+};
 
 
-
+export default Admin;
 
 
 
@@ -91,4 +98,3 @@ export async function getStaticProps() {
   };
 }
 
-export default Admin;

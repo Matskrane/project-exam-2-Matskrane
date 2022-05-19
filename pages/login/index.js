@@ -21,19 +21,19 @@ const Login = ({ hotels }) => {
   } = useForm({resolver: yupResolver(UserLoginSchema),
   });
 
-  const userLogin = async (formData) => {
-    const responseData = await axios.post(BASE_URL + AUTH_URL, {
-      identifier: formData.email,
-      password: formData.password,
+  const userLogin = async (data) => {
+    const response = await axios.post(BASE_URL + AUTH_URL, {
+      identifier: data.email,
+      password: data.password,
     });
 
-    setAuth(responseData.data);
+    setAuth(response.data);
 
     Router.push("/admin");
   };
 
-  const onSubmit = (formData) => {
-    userLogin(formData).catch(console.error);
+  const onSubmit = (data) => {
+    userLogin(data).catch(console.error);
     console.log(auth);
   };
 

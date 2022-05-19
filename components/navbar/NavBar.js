@@ -11,6 +11,7 @@ import Image from "next/image";
 const NavBar = () => {
   const [ auth, setAuth ] = useContext(AuthContext)
 
+
   function logout() {
     setAuth(null);
     Router.push("/");
@@ -20,7 +21,9 @@ const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="lg">
         <Container>
-          <Image className='logo-image' width={50} height={50} src="/hotel-logo.jpg"></Image>
+          <div className='logo-image'>
+          <Image  width={50} height={50} src="/hotel-logo.jpg"></Image>
+          </div>
           <Navbar.Brand href='/'>Holidaize</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

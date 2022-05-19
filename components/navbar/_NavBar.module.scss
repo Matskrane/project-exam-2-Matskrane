@@ -4,6 +4,16 @@
     padding-top: 0.7rem;
 }
 
+.logo-image img {
+    border-radius: 50%;
+}
+
+.logo-image {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+
 .navbar-nav a {
     letter-spacing: 1px;
     font-size: 22px;
@@ -17,6 +27,7 @@
     color: whitesmoke;
     font-weight: bold;
     margin-left: 5px;
+    padding-bottom: 14px;
 }
 
 .container {
