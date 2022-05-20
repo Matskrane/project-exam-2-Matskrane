@@ -276,3 +276,34 @@ input:focus {
   border-radius: 3px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
+
+.welcome-admin {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.container-tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  font-size: 28px;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #085c9c;
+}
+
+.nav-tabs {
+  border-bottom: solid#333 2px;
+  padding-bottom: 10px;
+}
+
+.nav-tabs .nav-link {
+  color: #333;
+  letter-spacing: 0.5px;
+}
