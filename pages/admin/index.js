@@ -37,13 +37,13 @@ const Admin = ({ hotels }) => {
         id="uncontrolled-tab-example"
         className="mb-3"
       >
-        <Tab eventKey="home" title="Booking">
+        <Tab eventKey="home" title="Bookings">
           <DisplayBookings />
         </Tab>
-        <Tab eventKey="profile" title="Messages">
+        <Tab eventKey="profile" title="Contact Messages">
           <DisplayContacts />
         </Tab>
-        <Tab eventKey="contact" title="Contact" disabled>
+        <Tab eventKey="contact" title="Create Hotel">
           <p>hrw</p>
         </Tab>
       </Tabs>
