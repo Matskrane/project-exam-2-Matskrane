@@ -8,6 +8,8 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import Link from "next/link";
 
 
+
+
 const Admin = ({ hotels }) => {
   
   const [bookings, setBookings] = useState([]);
@@ -26,12 +28,11 @@ const Admin = ({ hotels }) => {
     fetchData()
   }, [auth]);
 
-
-  if (!auth) {
+  if(!auth) {
     return (
-        <h1>You must be Logged in to view this page</h1>
-    );
-  }
+      <h1>You need to be logged in to view this page</h1>
+    )
+  }  
 
  
   return (
@@ -97,4 +98,3 @@ export async function getStaticProps() {
     }
   };
 }
-
