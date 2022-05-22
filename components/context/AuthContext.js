@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
+import PropTypes from "prop-types";
 
 const AuthContext = createContext([null, () => {}]);
 
@@ -10,6 +11,10 @@ export const AuthProvider = (props) => {
       {props.children}
     </AuthContext.Provider>
   );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export default AuthContext;
