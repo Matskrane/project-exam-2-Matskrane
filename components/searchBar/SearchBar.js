@@ -33,6 +33,7 @@ function SearchBar({ placeholder, hotels }) {
   };
 
   return (
+    <>
     <div className="search">
       <div className="searchInputs">
         <input
@@ -68,6 +69,7 @@ function SearchBar({ placeholder, hotels }) {
         </div>
       )}
     </div>
+    </>
   );
 }
 

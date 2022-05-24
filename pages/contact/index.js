@@ -1,59 +1,11 @@
-
-import { CONTACT_URL, HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../../constants/api";
 import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useState } from "react";
-import { Contact_Schema } from "../../components/schemas/yupSchemas";
 import Head from "next/head";
-
+import ContactForm from "../../components/forms/ContactForm";
 
 
 const Contact = ({ hotels }) => {
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(Contact_Schema),
-  });
-
-
-  const [success, setSuccess] = useState("");
-
-  async function sendForm(data) {
-    event.preventDefault();
-    const options = {
-      data: {
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      },
-    };
-
-    console.log(data);
-
-    
-
-    try {
-      const res = await axios.post(CONTACT_URL, options, {      
-        name: data.name,
-        email: data.email, 
-        message: data.message,
-      });
-      console.log(data)
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setSuccess("Your message is sent!");
-
-      setTimeout(() => {
-      window.location.reload();
-      }, 2000);
-    }
-  }
 
   return (
     <>
@@ -62,45 +14,13 @@ const Contact = ({ hotels }) => {
       <meta property='title' />
     </Head>    
     <SearchBar placeholder="Hotel name" hotels={hotels} />
-
-
-      <div className='login-border'>
-      <div className='login-container'>
-      <h1>Contact</h1>
-      <p>If you have any questions feel free to contact us here</p>
-      <form onSubmit={handleSubmit(sendForm)} >
-
-                <input type="text" {...register("name")} placeholder="Full Name" />
-                {errors.name && <span className>{errors.name.message}</span>}
-                <input type="text" {...register("email")} placeholder="Your Email" />
-                {errors.email && <span>{errors.email.message}</span>}
-                <textarea name="message" {...register("message")}  placeholder="Enter your message"></textarea>
-                {errors.message && <span>{errors.message.message}</span>}
-
-              <button>Send Message</button>
-              <div>
-                <p> {success} </p>
-              </div>
-            </form>
-            </div>
-            </div>
+    <ContactForm />
     </>
   );
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// using to get data to the Search Bar
 
 export async function getStaticProps() {
   

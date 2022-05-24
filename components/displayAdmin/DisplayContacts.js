@@ -12,7 +12,6 @@ const DisplayContacts = () => {
       const displayContacts = await http.get(CONTACT_URL);
       setContacts(displayContacts.data.data);
     };
-
     fetchData()
   }, []);
 

@@ -22,7 +22,6 @@ const CreateHotel = () => {
     });
 
     async function createHotel(data) {
-      event.preventDefault();
       const options = {
         data: {
           name: data.name,
@@ -46,9 +45,9 @@ const CreateHotel = () => {
       } finally {
         setSuccess("Your message is sent!");
 
-        //setTimeout(() => {
-        //window.location.reload();
-        //}, 2000);
+        setTimeout(() => {
+        window.location.reload();
+        }, 2000);
       }
     }
       

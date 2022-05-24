@@ -5,22 +5,23 @@ import Head from "next/head";
 import SearchBar from "../../components/searchBar/SearchBar";
 import DisplayContacts from "../../components/displayAdmin/DisplayContacts";
 import DisplayBookings from "../../components/displayAdmin/DisplayBookings";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import CreateHotel from "../../components/displayAdmin/CreateHotel";
 
+import dynamic from 'next/dynamic';
+const Test = dynamic(() => import ("../../components/Test"), {
+  ssr: false})
 
 
 const Admin = ({ hotels }) => {
   
   const [auth] = useContext(AuthContext);
 
-  if (!auth) {
-    return (
-      <h1>You need to be logged in to view this page</h1>
-    )
-  }
 
+  if (!auth) {
+    return   <Test />
+  }
  
   return (
     <>
@@ -45,7 +46,7 @@ const Admin = ({ hotels }) => {
           <DisplayContacts />
         </Tab>
         <Tab eventKey="contact" title="Create Hotel">
-          <CreateHotel auth={auth}/>
+          <CreateHotel />
         </Tab>
       </Tabs>
       </div>
@@ -55,9 +56,7 @@ const Admin = ({ hotels }) => {
 };
 
 
-export default Admin;
-
-
+// using to get data to the Search Bar
 
 export async function getStaticProps() {
   
@@ -76,3 +75,5 @@ export async function getStaticProps() {
     }
   };
 }
+
+export default Admin;
