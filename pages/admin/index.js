@@ -2,22 +2,24 @@ import { HOTELS_URL } from "../../constants/api";
 import axios from "axios";
 import AuthContext from "../../components/context/AuthContext";
 import Head from "next/head";
-import SearchBar from "../../components/searchBar/SearchBar";
-import DisplayContacts from "../../components/displayAdmin/DisplayContacts";
-import DisplayBookings from "../../components/displayAdmin/DisplayBookings";
-import { useContext, useEffect } from "react";
-import { Tabs, Tab } from "react-bootstrap";
-import CreateHotel from "../../components/displayAdmin/CreateHotel";
+import { useContext } from "react";
 
+
+// This is to prevent Hydration error
 import dynamic from 'next/dynamic';
 const Test = dynamic(() => import ("../../components/Test"), {
+  ssr: false})
+const SearchBar = dynamic(() => import ("../../components/searchBar/SearchBar"), {
+  ssr: false})
+const Header = dynamic(() => import ("../../components/Header"), {
+  ssr: false})
+const TabsAdmin = dynamic(() => import ("../../components/displayAdmin/TabsAdmin"), {
   ssr: false})
 
 
 const Admin = ({ hotels }) => {
   
   const [auth] = useContext(AuthContext);
-
 
   if (!auth) {
     return   <Test />
@@ -30,27 +32,9 @@ const Admin = ({ hotels }) => {
         <meta property="title" />
       </Head>
       <SearchBar hotels={hotels} />
+      <Header title={"Welcome Admin"}/>
+      <TabsAdmin />
 
-      <h1 className="welcome-admin">Welcome Admin</h1>
-      <div className="container-tabs">
-      <div className="admin-tabs">
-      <Tabs
-        defaultActiveKey="profile"
-        id="uncontrolled-tab-example"
-        className="mb-3"
-      >
-        <Tab eventKey="home" title="Bookings">
-          <DisplayBookings />
-        </Tab>
-        <Tab eventKey="profile" title="Contact Messages">
-          <DisplayContacts />
-        </Tab>
-        <Tab eventKey="contact" title="Create Hotel">
-          <CreateHotel />
-        </Tab>
-      </Tabs>
-      </div>
-      </div>
     </>
   );
 };

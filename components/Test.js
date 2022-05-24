@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import AuthContext from "./context/AuthContext";
+import Header from "./Header";
 
 
 const Test = () => {
     const [auth] = useContext(AuthContext);
     if (!auth) {
         return (
-          <h1>You need to be logged in to view this page</h1>
+          <Header title={"Not Authenticated, Please login first."} />
         )
       }
 }
