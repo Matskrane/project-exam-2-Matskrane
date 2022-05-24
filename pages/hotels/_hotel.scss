@@ -26,53 +26,62 @@
     font-weight: 700;
 }
 
-.specific-hotel {
-    max-width: 1100px;
-    margin: 100px auto;
-    
-}
-
 .specific-hotel h1 {
     margin-bottom: 30px;
+    font-size: 30px;
 }
 
 .hotel-flex {
     display: flex;
+    max-width: 1100px;
+    margin: 100px auto;
 }
 
-.split {
-  padding-left: 30px;
-  max-width: 550px;
+.hotel-right-side p {
+    max-width: 300px;
+    border-bottom: solid#085c9c;
+    border-width: 4px;
+    padding-bottom: 10px;
 }
 
-.split h3 {
-    font-size: 24px;
-}
+.hotel-right-side span {
 
-.split p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 19px;
-}
-
-.split span {
     font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 21px;
+    font-size: 18px;
 }
 
-.bottom {
-    background-color: #085c9c;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 1px;
+.hotel-price,
+.hotel-rating,
+.hotel-adress {
+    margin-top: 20px;
+}
+
+.hotel-right-side {
+    padding: 10px 20px;
+    margin-bottom: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: auto;
+
+}
+
+.booking-container h4 {
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .booking-form {
-    max-width: 1100px;
-    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     color: white;
+    background-color: #085c9c;
 }
 
 .booking-form form {
@@ -85,6 +94,7 @@
     padding: 5px;
     max-width: 400px;
     border: none;
+    outline: none;
     border-radius: 3px;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
@@ -116,8 +126,9 @@
 }
 
 .date-picker {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 450px;
 }
 
 .date-picker p {
@@ -139,13 +150,26 @@
 }
 
 .booking-form button {
-    margin-top: 15px;
-    width: 150px;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    max-width: 150px;
+    margin: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
     border: none;
-    border-radius: 3px;
-    font-size: 18px;
     font-weight: 700;
-    padding: 5px;
-    background-color: rgb(21, 126, 237);
-    color: white;
 }
+         
+
+.booking-form button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+ 

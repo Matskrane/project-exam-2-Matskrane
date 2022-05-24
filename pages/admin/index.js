@@ -7,6 +7,7 @@ import DisplayContacts from "../../components/displayAdmin/DisplayContacts";
 import DisplayBookings from "../../components/displayAdmin/DisplayBookings";
 import { useContext } from "react";
 import { Tabs, Tab } from "react-bootstrap";
+import CreateHotel from "../../components/displayAdmin/CreateHotel";
 
 
 
@@ -44,7 +45,7 @@ const Admin = ({ hotels }) => {
           <DisplayContacts />
         </Tab>
         <Tab eventKey="contact" title="Create Hotel">
-          <p>hrw</p>
+          <CreateHotel auth={auth}/>
         </Tab>
       </Tabs>
       </div>

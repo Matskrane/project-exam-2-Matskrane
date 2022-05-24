@@ -57,7 +57,7 @@ const Login = ({ hotels }) => {
           placeholder='Your password...'
         />
         {errors.password && <span>{errors.password.message}</span>}
-        <button>Send</button>
+        <button>Login</button>
 
       </form>
       </div>

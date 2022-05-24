@@ -8,7 +8,7 @@ const HeroBanner = () => {
     <Image width={1300} height={600} src="/hero-stolent-3.jpg" alt="picture of the city" />              
             <div className="caption">
                 <h2>Welcome to Holidaize</h2>
-                <p>We got the best offers in town</p>              
+                <p>We have the best offers in town</p>              
                 <div className="button">                  
                 <Link href="/hotels">Book now</Link>
                 </div>

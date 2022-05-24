@@ -77,7 +77,7 @@ const Contact = ({ hotels }) => {
                 <textarea name="message" {...register("message")}  placeholder="Enter your message"></textarea>
                 {errors.message && <span>{errors.message.message}</span>}
 
-              <button>Submit</button>
+              <button>Send Message</button>
               <div>
                 <p> {success} </p>
               </div>
