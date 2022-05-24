@@ -1,7 +1,6 @@
 import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
 import {HOTELS_URL } from "../../constants/api";
-
 import Head from "next/head";
 import HotelCards from "../../components/hotelCards/HotelCards";
 
@@ -17,7 +16,6 @@ const Hotels = ({ hotels }) => {
     </>
   );
 }
-
 
 
 export async function getStaticProps() {

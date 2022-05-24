@@ -6,6 +6,7 @@ import useAxios from "../../hooks/UseAxios";
 const DisplayBookings = () => {
 
   const [bookings, setBookings] = useState([]);
+  
   const http = useAxios();
 
   useEffect(() => {

@@ -6,9 +6,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios from "axios";
 
 
-
-
-
 const CreateHotel = () => {
 
     const [success, setSuccess] = useState("");
@@ -31,7 +28,6 @@ const CreateHotel = () => {
         },
       };
 
-      console.log(data);
       try {
         const res = await axios.post(HOTELS_URL, options, {
           name: data.name,
@@ -39,7 +35,6 @@ const CreateHotel = () => {
           rating: data.rating,
           image_url: data.image_url,
         });
-        console.log(data);
       } catch (error) {
         console.log(error);
       } finally {

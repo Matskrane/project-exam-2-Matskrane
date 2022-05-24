@@ -6,11 +6,8 @@ import AuthContext from '../context/AuthContext';
 import Image from "next/image";
 
 
-
-
 const NavBar = () => {
   const [ auth, setAuth ] = useContext(AuthContext)
-
 
   function logout() {
     setAuth(null);

@@ -5,7 +5,6 @@ import Head from "next/head";
 import LoginForm from '../../components/forms/LoginForm';
 
 
-
 const Login = ({ hotels }) => {
   
   return (

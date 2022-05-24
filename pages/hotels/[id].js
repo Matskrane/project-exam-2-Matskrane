@@ -1,10 +1,8 @@
 import axios from "axios";
-import { HOTELS_ID } from "../../constants/api";
+import { HOTELS_URL } from "../../constants/api";
 import Head from 'next/head';
-
 import BookingForm from "../../components/forms/BookingForm";
 import HotelCard from "../../components/hotelCards/HotelCard";
-
 
 
 const Hotel = ({ hotels }) => {
@@ -18,7 +16,6 @@ const Hotel = ({ hotels }) => {
         </Head>
         
         <HotelCard hotels={hotels} />
-
         <BookingForm hotels={hotels} />
       </>
     );
@@ -26,7 +23,7 @@ const Hotel = ({ hotels }) => {
 
   
 export async function getStaticProps({ params }) {
-  const url = `${HOTELS_ID}/${params.id}`
+  const url = `${HOTELS_URL}/${params.id}`
 
   let hotels = null;
 
@@ -47,7 +44,7 @@ export async function getStaticProps({ params }) {
   
 export async function getStaticPaths() {
   try {
-    const response = await axios.get(HOTELS_ID);
+    const response = await axios.get(HOTELS_URL);
 
     const hotels = response.data.data;
 

@@ -9,7 +9,6 @@ function SearchBar({ placeholder, hotels }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
   
-
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
@@ -17,8 +16,6 @@ function SearchBar({ placeholder, hotels }) {
       return value.attributes.name.toLowerCase().includes(searchWord.toLowerCase());
     });
     
-
-
     if (searchWord === "") {
       setFilteredData([]);
     } else {
@@ -26,7 +23,6 @@ function SearchBar({ placeholder, hotels }) {
     }
   };
   
-
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
