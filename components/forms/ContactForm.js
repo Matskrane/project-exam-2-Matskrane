@@ -1,4 +1,4 @@
-import { CONTACT_URL } from "../../constants/api";
+import { CONTACT_URL } from "../../utils/constants/api";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

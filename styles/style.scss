@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import "/styles/modules/NavBar.module.scss";
-@import "/styles/modules/HeroBanner.modules.scss";
+@import "/styles/modules/HeroBanner.module.scss";
 @import "/styles/modules/Footer.module.scss";
 @import "/styles/modules/Hotels.module.scss";
 @import "/styles/modules/SearchBar.module.scss";
@@ -48,39 +48,24 @@ img {
 // icons front page
 
 .section-one-icons {
-  padding-bottom: 50px;
-  padding-top: 30px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.section-one {
-  margin-top: 30px;
-  padding-bottom: 50px;
-  padding-top: 30px;
-  background-color: #023d8f;
+.container-one {
+    max-width: 700px;
+    background-color: #023d8f;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
 
 .section-one-icons h2 {
-    color: #023d8f;
-    font-size: 35px;
-    padding-top: 30px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section-one h2 {
     color: white;
     font-size: 35px;
     padding-top: 30px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section-one h3 {
-    max-width: 1100px;
-    color: white;
-    margin: auto;
-    font-size: 35px;
-    padding-top: 10px;
 }
 
 .flexbox-one {
@@ -106,15 +91,21 @@ img {
     align-items: center;
     padding-top: 20px;
     margin-right: 50px;
-    color: #023d8f;
+    color: white;
 }
 
 // Header js component
 
 .headers {
-  font-weight: 700;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
+
+.hotel-headers h1 {
+    max-width: 1100px;
+    margin: auto;
+}
+
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { BOOKING_URL } from '../../constants/api';
+import { BOOKING_URL } from '../../utils/constants/api';
 import useAxios from "../../hooks/UseAxios";
 
 
@@ -40,7 +40,7 @@ const DisplayBookings = () => {
         };
 
         return (
-          <div className='card-admin'>
+          <div key={idx} className='card-admin'>
             <Card style={{ width: "18rem" }}>
               <Card.Body>
                 <Card.Title>{hotel}</Card.Title>

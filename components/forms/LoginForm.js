@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import Router from 'next/router';
-import { AUTH_URL, BASE_URL } from '../../constants/api';
+import { AUTH_URL, BASE_URL } from '../../utils/constants/api';
 import AuthContext from '../../components/context/AuthContext';
 import { UserLoginSchema } from '../../components/schemas/yupSchemas';
 

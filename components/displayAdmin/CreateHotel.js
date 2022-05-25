@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../../utils/constants/api";
 import { CreateNewHotel } from "../schemas/yupSchemas";
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from "axios";
@@ -66,8 +66,10 @@ const CreateHotel = () => {
 
           <Dropdown.Menu>
             <p>
-              The image must be from Hotels.com <br></br>
-              Right click on the image and copy the link adress{" "}
+              The image must be from Hotels.com.
+              <br></br> 
+              <br></br> 
+              Right click on the image and copy the link adress.{" "}
             </p>
           </Dropdown.Menu>
         </Dropdown>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { CONTACT_URL } from "../../constants/api";
+import { CONTACT_URL } from "../../utils/constants/api";
 import useAxios from "../../hooks/UseAxios";
 
 
@@ -39,7 +39,7 @@ const DisplayContacts = () => {
         };
 
         return (
-          <div className='card-admin'>
+          <div key={idx} className='card-admin'>
             <Card style={{ width: "18rem" }}>
               <Card.Body>
                 <Card.Title>{name}</Card.Title>

@@ -13,7 +13,7 @@ const HotelCards = ({hotels}) => {
       return (
         <Link key={idx} passHref href={`/hotels/${id}`}>
           <Card style={{ width: "18rem" }}>
-            <Image width={250} height={180} src={image_url}></Image>
+            <Image width={250} height={180} src={image_url} alt="hotel image" />
 
             <Card.Body>
               <Card.Title>{name}</Card.Title>

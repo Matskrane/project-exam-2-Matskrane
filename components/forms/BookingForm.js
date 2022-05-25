@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { BOOKING_URL } from "../../constants/api";
+import { BOOKING_URL } from "../../utils/constants/api";
 import { bookingSchema } from "../../components/schemas/yupSchemas";
 import { useState } from "react";
 

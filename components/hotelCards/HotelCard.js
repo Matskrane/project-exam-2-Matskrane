@@ -8,7 +8,7 @@ const HotelCard = ({ hotels }) => {
     <div className="hotel-flex">
 
       <div className="hotel-left-side">
-        <Image width={500} height={450} src={image_url} />
+        <Image src={image_url} width={500} height={450} alt="hotel image" />
       </div>
 
       <div className="hotel-right-side">

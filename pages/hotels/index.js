@@ -1,8 +1,10 @@
 import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
-import {HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../../utils/constants/api";
 import Head from "next/head";
 import HotelCards from "../../components/hotelCards/HotelCards";
+import Header from "../../utils/Header";
+
 
 const Hotels = ({ hotels }) => {
   return (
@@ -12,6 +14,7 @@ const Hotels = ({ hotels }) => {
         <meta property="title" />
       </Head>
       <SearchBar placeholder="Hotel name" hotels={hotels} />
+      <Header hotelHeaders="List of all Hotels" />
       <HotelCards hotels={hotels} />
     </>
   );

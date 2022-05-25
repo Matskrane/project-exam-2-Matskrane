@@ -1,43 +1,43 @@
 .container-tabs {
     display: flex;
     justify-content: center;
-  }
-  
-  .nav-item {
+}
+
+.nav-item {
     font-size: 26px;
     margin-bottom: -1px;
-  }
-  
-  .nav-tabs .nav-link.active {
+}
+
+.nav-tabs .nav-link.active {
     color: white;
     background-color: #085c9c;
     border: none;
-  }
-  
-  .nav-tabs {
-    border-bottom: solid#085c9c 10px;
-    border-bottom-left-radius: 5px;
-  }
-  
-  .nav-tabs .nav-link {
+}
+
+.nav-tabs {
+    border-bottom: solid#085c9c 15px;
+    border-bottom-left-radius: 2px;
+}
+
+.nav-tabs .nav-link {
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.3rem;
     color: #333;
-  }
-  
-  // admin
-  
-  .create-hotel-form form {
+}
+
+.create-hotel-form form {
     display: flex;
     flex-direction: column;
     max-width: 300px;
     gap: 20px;
-  }
-  
-  .card-admin .card-text {
+}
+
+.card-admin .card-text {
     padding-bottom: 20px;
     padding-top: 10px;
-  }
-  
-  .button-delete button {
+}
+
+.button-delete button {
     display: inline-block;
     padding: 0.25em 1em;
     border: 0.2em solid #ed0404;
@@ -45,24 +45,24 @@
     border-radius: 0.12em;
     box-sizing: border-box;
     font-weight: 700;
-    color:#000000;
-    text-align:center;
+    color: #000000;
+    text-align: center;
     transition: all 0.2s;
-  }
-  .button-delete button:hover{
-    color:#000000;
-    background-color:#ff0000;
-  }
-  
-  .tab-content .card {
+}
+.button-delete button:hover {
+    color: #000000;
+    background-color: #ff0000;
+}
+
+.tab-content .card {
     margin-top: 20px;
-  }
-  
-  .dropdown p {
+}
+
+.dropdown p {
     padding: 3px;
     color: white;
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
     background-color: #565e64;
-  }
+}

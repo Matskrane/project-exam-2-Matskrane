@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PropTypes from "prop-types";
 
 export const useLocalStorage = (key, initialValue) => {
   // State to store our value

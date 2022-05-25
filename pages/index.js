@@ -2,11 +2,12 @@ import { HiWifi } from "react-icons/hi";
 import { MdOutlineStar, MdQuickreply } from "react-icons/md";
 import HeroBanner from "../components/heroBanner/HeroBanner";
 import axios from 'axios';
-import { HOTELS_URL } from "../constants/api";
+import { HOTELS_URL } from "../utils/constants/api";
 import SearchBar from "../components/searchBar/SearchBar";
 import Head from "next/head";
 import HotelCards from "../components/hotelCards/HotelCards";
-import "../styles/modules/HeroBanner.module.scss";
+import Header from "../utils/Header";
+
 
 
 const Home = ({ hotels }) => {
@@ -40,6 +41,7 @@ const Home = ({ hotels }) => {
         </div>
       </div>
 
+      <Header hotelHeader="List of all Hotels" />
       <HotelCards hotels={hotels} />
      
     </>

@@ -1,4 +1,4 @@
-import { HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../../utils/constants/api";
 import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
 import Head from "next/head";

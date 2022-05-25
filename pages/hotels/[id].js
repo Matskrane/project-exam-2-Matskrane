@@ -1,5 +1,5 @@
 import axios from "axios";
-import { HOTELS_URL } from "../../constants/api";
+import { HOTELS_URL } from "../../utils/constants/api";
 import Head from 'next/head';
 import BookingForm from "../../components/forms/BookingForm";
 import HotelCard from "../../components/hotelCards/HotelCard";
