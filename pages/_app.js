@@ -1,8 +1,8 @@
 import Footer from '../components/footer/footer';
 import '../styles/style.scss';
 import { AuthProvider } from '../components/context/AuthContext';
-import dynamic from 'next/dynamic';
 
+import dynamic from 'next/dynamic';
 const NavBar = dynamic(() => import ('../components/navbar/NavBar'), {
   ssr: false})
 

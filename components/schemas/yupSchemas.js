@@ -28,4 +28,5 @@ export const CreateNewHotel = yup.object().shape ({
   image_url: yup.string().matches(/(\exp.cdn-hotels.com)/, 'The Url must be from Hotels.com').required(), 
   price: yup.number().required(), 
   rating: yup.string().required(),
+  adress: yup.string().required(),
 })

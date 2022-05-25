@@ -36,17 +36,17 @@
 }
 
 .button a {
-  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  background-image: linear-gradient(to right, #0966a8 0%, #12D8FA  70%, #1FA2FF  100%);
   max-width: 200px;
   margin: 10px;
-  padding: 10px 10px;
+  padding: 12px 15px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;            
-  box-shadow: 0 0 5px #eee;
-  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(167, 164, 164);
+  border-radius: 5px;
   display: block;
   border: none;
   font-weight: 700;
@@ -58,3 +58,5 @@
   color: #fff;
   text-decoration: none;
 }
+
+

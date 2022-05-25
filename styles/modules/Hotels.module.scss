@@ -34,7 +34,9 @@
 .hotel-flex {
     display: flex;
     max-width: 1100px;
-    margin: 100px auto;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 100px;
 }
 
 .hotel-right-side p {
@@ -58,14 +60,14 @@
 
 .hotel-right-side {
     padding: 10px 20px;
-    margin-bottom: 7px;
+    padding-bottom: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .booking-container {
     max-width: 600px;
     margin: auto;
-
+    margin-top: 50px;
 }
 
 .booking-container h4 {

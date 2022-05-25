@@ -6,8 +6,7 @@ import { HOTELS_URL } from "../constants/api";
 import SearchBar from "../components/searchBar/SearchBar";
 import Head from "next/head";
 import HotelCards from "../components/hotelCards/HotelCards";
-
-
+import "../styles/modules/HeroBanner.module.scss";
 
 
 const Home = ({ hotels }) => {

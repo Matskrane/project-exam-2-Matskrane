@@ -1,9 +1,12 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-@import "../components/navbar/NavBar.module.scss";
-@import "../components/heroBanner/heroBanner.modules";
-@import "../components/footer/footer.scss";
-@import "../pages/hotels/hotel";
+@import "/styles/modules/NavBar.module.scss";
+@import "/styles/modules/HeroBanner.modules.scss";
+@import "/styles/modules/Footer.module.scss";
+@import "/styles/modules/Hotels.module.scss";
+@import "/styles/modules/SearchBar.module.scss";
+@import "/styles/modules/LoginForm.module.scss";
+@import "/styles/modules/Admin.module.scss";
 
 
 *{
@@ -40,6 +43,9 @@ p {
 img {
     width: 100%;
 }
+
+
+// icons front page
 
 .section-one-icons {
   padding-bottom: 50px;
@@ -103,184 +109,7 @@ img {
     color: #023d8f;
 }
 
-// Featured section
-
-.flex-featured {
-    display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-
-
-// Search Bar
-
-.search {
-  background-color: #2a2a72;
-  background-image: linear-gradient(360deg, #0481ca 0%, #023d8f 50%);
-}
-
-.searchInputs {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.search input {
-  background-color: white;
-  border: 0;
-  border-radius: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  font-size: 18px;
-  padding: 15px;
-  height: 60px;
-  width: 300px;
-}
-
-.searchIcon {
-  height: 60px;
-  width: 50px;
-  background-color: white;
-  display: grid;
-  place-items: center;
-}
-
-input:focus {
-  outline: none;
-}
-.searchIcon svg {
-  font-size: 35px;
-}
-
-.dataResult {
-  margin-top: -25px;
-  width: 350px;
-  height: auto;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-  overflow: hidden;
-  overflow-y: auto;
-}
-
-.dataResult-centered {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 15px;
-}
-
-
-.dataResult::-webkit-scrollbar {
-  display: none;
-}
-
-.dataResult .dataItem {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  color: black;
-  cursor: pointer;
-}
-
-.dataItem h2 {
-  margin-left: 10px;
-  font-size: 15px;
-}
-
-.dataItem p {
-  margin-left: 10px;
-  margin-top: -14px;
-}
-
-.dataItem:hover {
-  background-color: lightgrey;
-}
-
-#clearBtn {
-  cursor: pointer;
-}
-
-.login-container {
-  margin: 100px 0;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #085c9c;
-  border-radius: 5px;
-}
-
-.login-container h1 {
-  padding: 15px 0;
-  color: white;
-}
-
-.login-border {
-  max-width: 600px;
-  margin: auto;
-
-}
-
-.login-container p {
-  color: rgb(197, 197, 197);
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.login-container form {
-  display: grid;
-}
-
-.login-container input {
-  margin: 10px 0;
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-
-.login-container button {
-  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-  max-width: 150px;
-  margin: 10px;
-  padding: 10px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 5px #eee;
-  border-radius: 10px;
-  display: block;
-  border: none;
-  font-weight: 700;
-}
-
-.login-container span {
-  color: rgb(255, 106, 0);
-  font-size: 20px;
-  margin-top: -5px;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.login-container textarea {
-  width: 350px;
-  padding: 5px 10px;
-  height: 150px;
-  font-size: 20px;
-  outline: none;
-  resize: none;
-  border: none;
-  border-radius: 3px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
+// Header js component
 
 .headers {
   font-weight: 700;
@@ -289,25 +118,3 @@ input:focus {
   margin-bottom: 30px;
 }
 
-.container-tabs {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  font-size: 26px;
-}
-
-.nav-tabs .nav-link.active {
-  color: white;
-  background-color: #085c9c;
-}
-
-.nav-tabs {
-  border-bottom: solid#333 2px;
-  padding-bottom: 10px;
-}
-
-.nav-tabs .nav-link {
-  color: #333;
-}

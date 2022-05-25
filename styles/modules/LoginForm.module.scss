@@ -1,0 +1,81 @@
+.login-container {
+    margin: 100px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #085c9c;
+    border-radius: 5px;
+}
+
+.login-container h1 {
+    padding-bottom: 5px;
+    color: white;
+}
+
+.login-border {
+    max-width: 600px;
+    margin: auto;
+
+}
+
+.login-container p {
+    color: rgb(197, 197, 197);
+    font-size: 18px;
+    margin-bottom: 15px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.login-container form {
+    display: grid;
+}
+
+.login-container input {
+    margin: 10px 0;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0 inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.login-container button {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+    max-width: 150px;
+    margin: 20px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-weight: 700;
+}
+
+.login-container span {
+    color: rgb(255, 106, 0);
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.login-container textarea {
+    margin-top: 10px;
+    width: 350px;
+    padding: 5px 10px;
+    height: 150px;
+    font-size: 20px;
+    outline: none;
+    resize: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0 inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
