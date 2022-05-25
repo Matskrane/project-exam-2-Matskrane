@@ -4,7 +4,6 @@ import AuthContext from "../../components/context/AuthContext";
 import Head from "next/head";
 import { useContext } from "react";
 
-
 // This is to prevent Hydration error
 import dynamic from 'next/dynamic';
 const Test = dynamic(() => import ("../../components/Test"), {
@@ -13,7 +12,7 @@ const SearchBar = dynamic(() => import ("../../components/searchBar/SearchBar"),
   ssr: false})
 const Header = dynamic(() => import ("../../components/Header"), {
   ssr: false})
-const TabsAdmin = dynamic(() => import ("../../components/displayAdmin/TabsAdmin"), {
+const AdminPanel = dynamic(() => import ("../../components/displayAdmin/AdminPanel"), {
   ssr: false})
 
 
@@ -33,7 +32,7 @@ const Admin = ({ hotels }) => {
       </Head>
       <SearchBar hotels={hotels} />
       <Header title={"Welcome Admin"}/>
-      <TabsAdmin />
+      <AdminPanel />
 
     </>
   );

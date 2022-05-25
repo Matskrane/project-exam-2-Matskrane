@@ -5,7 +5,7 @@ import DisplayContacts from "./DisplayContacts";
 
 
 
-const TabsAdmin = () => {
+const AdminPanel = () => {
   return (
     <div className="container-tabs">
       <div className="admin-tabs">
@@ -29,4 +29,4 @@ const TabsAdmin = () => {
   );
 }
 
-export default TabsAdmin
+export default AdminPanel
