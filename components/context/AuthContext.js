@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { useLocalStorage } from "../../hooks/UseLocalStorage";
 import PropTypes from "prop-types";
 
 const AuthContext = createContext([null, () => {}]);
