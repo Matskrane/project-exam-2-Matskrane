@@ -175,6 +175,13 @@
     text-decoration: none;
 }
 
+@media (max-width:1050px) {
+    .hotel-flex {
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+    }
+}
 @media (max-width:900px) {
     .container-hotels {
         grid-template-columns: repeat(2, 1fr);
@@ -185,6 +192,25 @@
 @media (max-width:650px) {
     .container-hotels {
         grid-template-columns: 1fr;
+    }
+
+    .hotel-flex {
+        max-width: 90%;
+    }
+
+    .booking-container {
+        max-width: 90%;
+    }
+    .booking-container h4 {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:400px) {
+    .date-picker {
+        grid-template-columns: 1fr;
+        max-width: 70%;
     }
 }
  

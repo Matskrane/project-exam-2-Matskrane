@@ -66,3 +66,27 @@
 .dropdown-menu {
     background-color: #565e64;
 }
+
+@media (max-width: 600px) {
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .tab-content {
+        display: grid;
+        justify-items: center;
+    }
+
+    .tab-content h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-item {
+        font-size: 17px;
+    }
+    .nav-link {
+        padding: 0.3rem 0.4rem;
+    }
+}
