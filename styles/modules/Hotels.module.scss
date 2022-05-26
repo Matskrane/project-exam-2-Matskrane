@@ -91,6 +91,7 @@
 }
 
 .booking-form textarea {
+    height: 90px;
     resize: none;
     padding: 5px;
     max-width: 400px;
@@ -112,7 +113,7 @@
 .hotel-name {
     border: none;
     margin-bottom: 5px;
-    font-size: 17px;
+    font-size: 20px;
     background-color: #085c9c;
     color: white;
 }
@@ -153,7 +154,7 @@
 .booking-form button {
     background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
     max-width: 150px;
-    margin: 10px;
+    margin: 20px 20px 20px 0px;
     padding: 10px 10px;
     text-align: center;
     text-transform: uppercase;
@@ -172,5 +173,18 @@
     background-position: right center;
     color: #fff;
     text-decoration: none;
+}
+
+@media (max-width:900px) {
+    .container-hotels {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+@media (max-width:650px) {
+    .container-hotels {
+        grid-template-columns: 1fr;
+    }
 }
  

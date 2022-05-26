@@ -57,3 +57,25 @@
     background-color: #0b5ed7;
     border-color: #0a58ca;
 }
+
+.navbar-light .navbar-toggler {
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .logout-button {
+        margin: 10px auto;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar-nav a {
+        margin-left: 5px;
+    }
+
+    .navbar.light .navbar-toggler-icon {
+        color: white;
+    }
+}
