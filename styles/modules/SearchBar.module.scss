@@ -1,6 +1,7 @@
 .search {
     background-color: #2a2a72;
     background-image: linear-gradient(360deg, #0569a3 0%, #023d8f 50%);
+    position: relative;
 }
 
 .searchInputs {
@@ -45,12 +46,16 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     overflow: hidden;
     overflow-y: auto;
+    position: absolute;
+    z-index: 1;
+
 }
 
 .dataResult-centered {
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
+
 }
 
 
@@ -93,12 +98,10 @@
   .searchIcon {
       height: 50px;
   }
-
   .searchInputs {
     padding-top: 5px;
     padding-bottom: 20px;
   }
-
   .dataResult {
     width: 250px;
     margin-top: -15px;

@@ -10,7 +10,7 @@ const HeroBanner = () => {
           <h2>Welcome to Holidaize</h2>
           <p>We have the best offers in town</p>
           <div className="button">
-            <Link href="/hotels">Book now</Link>
+            <Link href="/hotels">View Hotels</Link>
           </div>
         </div>
       </div>

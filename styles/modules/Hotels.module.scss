@@ -31,12 +31,22 @@
     font-size: 30px;
 }
 
+.container-hotel {
+    max-width: 750px;
+    margin: auto;
+}
+
 .hotel-flex {
     display: flex;
-    max-width: 1000px;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     margin-top: 100px;
+}
+
+.hotel-left-side {
+    position: relative;
+    width: 450px;
+    height: 400px;
 }
 
 .hotel-right-side p {
@@ -70,7 +80,7 @@
 }
 
 .booking-container h4 {
-    margin-left: 5px;
+    margin-left: 15px;
     margin-bottom: 15px;
     font-size: 30px;
     font-weight: 700;
@@ -112,8 +122,8 @@
 
 .hotel-name {
     border: none;
-    margin-bottom: 5px;
-    font-size: 20px;
+    margin-bottom: 15px;
+    font-size: 25px;
     background-color: #085c9c;
     color: white;
 }
@@ -147,7 +157,8 @@
 }
 
 .booking-form span {
-    font-size: 14px;
+    color: rgb(255, 106, 0);
+    font-size: 15px;
     float: left;
 }
 
@@ -176,10 +187,16 @@
 }
 
 @media (max-width:1050px) {
+    
     .hotel-flex {
         flex-direction: column;
         align-items: center;
-        max-width: 500px;
+    }
+    .container-hotel {
+        max-width: 450px;
+    }
+    .hotel-right-side {
+        width: 450px;
     }
 }
 @media (max-width:900px) {
@@ -194,8 +211,12 @@
         grid-template-columns: 1fr;
     }
 
-    .hotel-flex {
-        max-width: 90%;
+    .card {
+        margin-top: 30px;
+    }
+
+    .container-hotel {
+        max-width: 450px;
     }
 
     .booking-container {
@@ -207,10 +228,34 @@
     }
 }
 
+@media (max-width:500px) {
+    .hotel-left-side {
+        max-width: 400px;
+        height: 300px;
+    }
+    .hotel-right-side {
+        max-width: 400px;
+    }
+    .hotel-flex {
+        max-width: 400px;
+        margin-top: 50px;
+    }
+}
+
 @media (max-width:400px) {
     .date-picker {
         grid-template-columns: 1fr;
         max-width: 70%;
+    }
+    .hotel-left-side {
+        max-width: 300px;
+        height: 300px;
+    }
+    .hotel-right-side {
+        max-width: 300px;
+    }
+    .hotel-flex {
+        max-width: 300px;
     }
 }
  

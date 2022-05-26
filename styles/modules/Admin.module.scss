@@ -6,6 +6,7 @@
 .nav-item {
     font-size: 26px;
     margin-bottom: -2px;
+    font-weight: 700;
 }
 
 .nav-tabs .nav-link.active {
@@ -16,13 +17,15 @@
 
 .nav-tabs {
     border-bottom: solid#085c9c 15px;
-    border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .nav-tabs .nav-link {
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
     color: #333;
+    background-color: white;
 }
 
 .create-hotel-form form {

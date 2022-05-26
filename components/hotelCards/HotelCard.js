@@ -5,10 +5,10 @@ const HotelCard = ({ hotels }) => {
   const { name, image_url, price, rating, adress } = hotels.attributes;
 
   return (
+    <div className='container-hotel'>
     <div className="hotel-flex">
-
       <div className="hotel-left-side">
-        <Image src={image_url} width={500} height={450} alt="hotel image" />
+        <Image src={image_url} width={500} height={450} alt="hotel image" layout="fill" objectFit="cover"/>
       </div>
 
       <div className="hotel-right-side">
@@ -28,7 +28,7 @@ const HotelCard = ({ hotels }) => {
           <span>{adress}</span>
         </div>
       </div>
-      
+      </div>
     </div>
   );
 }
