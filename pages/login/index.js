@@ -13,7 +13,7 @@ const Login = ({ hotels }) => {
         <title>Login</title>
         <meta property="title" />
       </Head>
-      <SearchBar placeholder="Hotel name" hotels={hotels} />
+      <SearchBar placeholder="Search Hotels" hotels={hotels} />
       <LoginForm />
     </>
   );

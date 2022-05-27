@@ -18,7 +18,7 @@ const Home = ({ hotels }) => {
       <meta property='title' />
     </Head>
 
-      <SearchBar placeholder="Hotel name" hotels={hotels} />
+      <SearchBar placeholder="Search Hotels" hotels={hotels} />
       <HeroBanner />
 
       <div className="section-one-icons">

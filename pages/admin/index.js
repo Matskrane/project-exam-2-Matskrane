@@ -30,7 +30,7 @@ const Admin = ({ hotels }) => {
         <title>Admin</title>
         <meta property="title" />
       </Head>
-      <SearchBar hotels={hotels} />
+      <SearchBar placeholder="Search Hotels" hotels={hotels} />
       <Header header={"Welcome Admin"}/>
       <AdminPanel />
 
