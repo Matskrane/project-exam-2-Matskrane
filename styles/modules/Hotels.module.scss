@@ -12,6 +12,25 @@
     cursor: pointer;  
 }
 
+
+.card button {
+    background-image: linear-gradient(to right, #0966a8 0%, #12D8FA  70%, #1FA2FF  100%);
+    max-width: 200px;
+    margin: 10x 10px 10px 0;
+    padding: 7px 7px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 5px rgb(167, 164, 164);
+    border-radius: 5px;
+    display: block;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+
 .card-link {
     font-weight: bold;
     font-size: 18px;

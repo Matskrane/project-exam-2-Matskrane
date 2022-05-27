@@ -14,7 +14,7 @@ const Hotels = ({ hotels }) => {
         <meta property="title" />
       </Head>
       <SearchBar placeholder="Hotel name" hotels={hotels} />
-      <Header hotelHeader="List of all Hotels" />
+      <Header hotelHeader="All our Hotels available" />
       <HotelCards hotels={hotels} />
     </>
   );

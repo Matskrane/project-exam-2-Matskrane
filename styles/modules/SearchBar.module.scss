@@ -29,7 +29,8 @@
     background-color: white;
     display: grid;
     place-items: center;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .search input:focus {

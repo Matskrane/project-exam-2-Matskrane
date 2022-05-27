@@ -41,7 +41,7 @@ const Home = ({ hotels }) => {
         </div>
       </div>
 
-      <Header hotelHeader="List of all Hotels" />
+      <Header hotelHeader="Featured Hotels" />
       <HotelCards hotels={hotels} />
      
     </>
