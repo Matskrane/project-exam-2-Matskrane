@@ -1,8 +1,9 @@
+
 import Image from 'next/image';
 
 const HotelCard = ({ hotels }) => {
 
-  const { name, image_url, price, rating, adress } = hotels.attributes;
+  const { name, image_url, price, rating, adress, description } = hotels.attributes;
 
   return (
     <div className='container-hotel'>
@@ -14,9 +15,7 @@ const HotelCard = ({ hotels }) => {
       <div className="hotel-right-side">
         <h1>{name}</h1>
         <p>
-          Hotel Norge by Scandic is located in central Bergen, just next to
-          Byparken city park. Guests will find 3 floors of bars, lounge areas
-          and restaurants.
+          {description}
         </p>
         <div className="hotel-price">
           <span>Price starting at {price} Kr</span>

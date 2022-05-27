@@ -7,7 +7,7 @@ const HotelCards = ({hotels}) => {
     <div className="container-hotels">
 
     {hotels.map((hotel, idx) => {
-      const { name, image_url, price, rating } = hotel.attributes;
+      const { name, image_url, price, rating, description } = hotel.attributes;
       const { id } = hotel;
 
       return (
@@ -17,9 +17,7 @@ const HotelCards = ({hotels}) => {
 
             <Card.Body>
               <Card.Title>{name}</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make
-                up the bulk of the card's content.
+              <Card.Text>{description}
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">

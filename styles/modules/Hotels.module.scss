@@ -64,8 +64,8 @@
 
 .hotel-left-side {
     position: relative;
-    width: 450px;
-    height: 400px;
+    width: 500px;
+    height: 450px;
 }
 
 .hotel-right-side p {
@@ -216,10 +216,10 @@
         align-items: center;
     }
     .container-hotel {
-        max-width: 450px;
+        max-width: 500px;
     }
     .hotel-right-side {
-        width: 450px;
+        width: 500px;
     }
 }
 @media (max-width:900px) {
@@ -239,7 +239,7 @@
     }
 
     .container-hotel {
-        max-width: 450px;
+        max-width: 500px;
     }
 
     .booking-container {
