@@ -54,7 +54,7 @@ const BookingForm = ({ hotels }) => {
           className="hotel-name"
           value={name}
           {...register("hotel")}
-        />
+        />     
         <textarea
           {...register("message")}
           placeholder="Please include your full name, email and phone number"
