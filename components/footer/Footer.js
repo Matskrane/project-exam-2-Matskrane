@@ -43,12 +43,12 @@ const Footer = () => {
         <h4>Follow us on our social media!</h4>
         <ul>
           <li>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" >
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" >
               <i><FaInstagram /></i>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" >
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
               <i><FaFacebookSquare /></i>
             </a>
           </li>
@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
 
       <div className="copyright">
-        <p>© 2021 | Holidaize | All Rights Reserved</p>
+        <p>© 2021 | Holidaze | All Rights Reserved</p>
         <p>Best deals xD</p>
       </div>
     </>

@@ -21,7 +21,7 @@ const NavBar = () => {
           <div className='logo-image'>
           <Image alt='logo' width={50} height={50} src="/hotel-logo.jpg" layout="fill" objectFit="cover"></Image>
           </div>
-          <Navbar.Brand href='/'>Holidaize</Navbar.Brand>
+          <Navbar.Brand href='/'>Holidaze</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
