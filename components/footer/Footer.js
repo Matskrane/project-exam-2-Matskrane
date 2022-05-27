@@ -43,12 +43,12 @@ const Footer = () => {
         <h4>Follow us on our social media!</h4>
         <ul>
           <li>
-            <a href="https://www.facebook.com/mats.liankrane">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" >
               <i><FaInstagram /></i>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/matskrane/">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" >
               <i><FaFacebookSquare /></i>
             </a>
           </li>
