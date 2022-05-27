@@ -25,6 +25,7 @@ export const bookingSchema = yup.object().shape({
 
 export const CreateNewHotel = yup.object().shape ({
   name: yup.string().matches(/^[A-Za-z ]*$/, 'Please enter valid name').required("Don't forget to add your hotel name"), 
+  description: yup.string().required("description needed"),
   image_url: yup.string().matches(/(\exp.cdn-hotels.com)/, 'The Url must be from Hotels.com').required(), 
   price: yup.number().required(), 
   rating: yup.string().required(),

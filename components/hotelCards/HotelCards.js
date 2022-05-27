@@ -27,7 +27,9 @@ const HotelCards = ({hotels}) => {
               <ListGroupItem>{rating}</ListGroupItem>
             </ListGroup>
             <Card.Body>
+              <div className="button-cards">
               <button>Book here</button>
+              </div>
             </Card.Body>
           </Card>
         </Link>

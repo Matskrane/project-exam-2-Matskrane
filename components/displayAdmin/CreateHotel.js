@@ -28,6 +28,7 @@ const CreateHotel = () => {
           rating: data.rating,
           image_url: data.image_url,
           adress: data.adress,
+          description: data.description,
         },
       };
 
@@ -38,6 +39,7 @@ const CreateHotel = () => {
           rating: data.rating,
           image_url: data.image_url,
           adress: data.adress,
+          description: data.description,
         });
       } catch (error) {
         console.log(error);
@@ -55,6 +57,8 @@ const CreateHotel = () => {
       <form onSubmit={handleSubmit(createHotel)}>
         <input placeholder="Name of Hotel" {...register("name")} />
         {errors.name && <p>{errors.name.message}</p>}
+        <textarea placeholder="Description of hotel" {...register("description")} />
+        {errors.description && <p>{errors.description.message}</p>}
         <input placeholder="Starting Price" {...register("price")} />
         {errors.price && <p>{errors.price.message}</p>}
         <input placeholder="Rating" {...register("rating")} />
