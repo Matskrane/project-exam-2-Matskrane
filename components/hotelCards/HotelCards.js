@@ -7,14 +7,13 @@ const HotelCards = ({hotels}) => {
     <div className="container-hotels">
 
     {hotels.map((hotel, idx) => {
-      const { name, image_url, price, rating, description } = hotel.attributes;
+      const { name, image_url, price, rating } = hotel.attributes;
       const { id } = hotel;
 
       return (
         <Link key={idx} passHref href={`/hotels/${id}`}>
           <Card style={{ width: "18rem" }}>
             <Image width={250} height={180} src={image_url} alt="hotel image" />
-
             <Card.Body>
               <Card.Title>{name}</Card.Title>
             </Card.Body>

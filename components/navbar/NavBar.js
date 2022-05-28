@@ -19,7 +19,7 @@ const NavBar = () => {
       <Navbar className='navbar-dark'  collapseOnSelect expand="lg">
         <Container>
           <div className='logo-image'>
-          <Image alt='logo' width={50} height={50} src="/hotel-logo.jpg" layout="fill" objectFit="cover"></Image>
+          <Image alt='logo' src="/hotel-logo.jpg" layout="fill" objectFit="cover"></Image>
           </div>
           <Navbar.Brand href='/'>Holidaze</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
