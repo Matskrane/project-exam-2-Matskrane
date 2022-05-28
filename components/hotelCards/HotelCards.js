@@ -17,8 +17,6 @@ const HotelCards = ({hotels}) => {
 
             <Card.Body>
               <Card.Title>{name}</Card.Title>
-              <Card.Text>{description}
-              </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem className="price">

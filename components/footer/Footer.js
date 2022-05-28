@@ -11,9 +11,8 @@ const Footer = () => {
               <span>About us</span>
             </h3>
             <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud.
+              Welcome to Holidaze where we offer Hotels, B&B around Bergen area.
+              With us you will always have a good nights sleep.
             </p>
           </div>
 
@@ -32,7 +31,7 @@ const Footer = () => {
               <Link href="/contact">Contact</Link>
               </li>
               <li>
-              <Link href="/admin">Admin</Link>
+              <Link href="/login">Login</Link>
               </li>
             </ul>
           </div>

@@ -31,6 +31,12 @@
     font-size: 15px;
 }
 
+.button-cards button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
 .card-link {
     font-weight: bold;
     font-size: 18px;
@@ -200,6 +206,12 @@
     display: block;
     border: none;
     font-weight: 700;
+}
+
+.booking-form button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
          
 
