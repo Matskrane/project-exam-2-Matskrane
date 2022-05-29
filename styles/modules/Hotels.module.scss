@@ -308,5 +308,14 @@
     .hotel-name {
         font-size: 18px;
     }
+    .booking-form form {
+        display: block;
+    }
+}
+
+@media (max-width:350px) {
+    .hotel-name{
+        font-size: 15px;
+    }
 }
  
