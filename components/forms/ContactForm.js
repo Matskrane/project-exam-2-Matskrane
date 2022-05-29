@@ -57,7 +57,7 @@ const ContactForm = () => {
               {errors.message && <span>{errors.message.message}</span>}
 
               <button>Send Message</button>
-              <div>
+              <div className="form-success">
                 <p> {success} </p>
               </div>
             </form>

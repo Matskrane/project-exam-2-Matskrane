@@ -77,21 +77,23 @@ const BookingForm = ({ hotels }) => {
         <div className="date-picker">
           <div>
             <p>CheckIn Date:</p>
-            <input type="date" {...register("date_checkin")} />
+            <input placeholder="dd.mm.yyyy" type="date" {...register("date_checkin")} />
             {errors.date_checkin && (
               <span>{errors.date_checkin.message}</span>
             )}
           </div>
           <div>
             <p>CheckOut Date:</p>
-            <input type="date" {...register("date_checkout")} />
+            <input placeholder="dd.mm.yyyy" type="date" {...register("date_checkout")} />
             {errors.date_checkout && (
               <span>{errors.date_checkout.message}</span>
             )}
           </div>
         </div>
         <button>Book Now</button>
+        <div className="form-success">
         <p>{success}</p>
+        </div>
       </form>
     </div>
   </div>

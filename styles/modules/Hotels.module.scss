@@ -9,7 +9,15 @@
 .card {
     margin-top: 50px;
     box-shadow: rgba(41, 41, 41, 0.3) 0px 6px 12px -1px, rgba(45, 45, 45, 0.5) 2px 3px 7px 3px;
-    cursor: pointer;  
+    cursor: pointer;
+    border: none;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;  
+}
+
+.card img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
 
