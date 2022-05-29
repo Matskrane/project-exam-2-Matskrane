@@ -33,7 +33,6 @@ const Admin = ({ hotels }) => {
       <SearchBar placeholder="Search Hotels" hotels={hotels} />
       <Header header={"Welcome Admin"}/>
       <AdminPanel />
-
     </>
   );
 };

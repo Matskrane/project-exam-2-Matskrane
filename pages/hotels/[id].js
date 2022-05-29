@@ -14,7 +14,6 @@ const Hotel = ({ hotels }) => {
           <title>{name}</title>
           <meta property="title" key={id} />
         </Head>
-        
         <HotelCard hotels={hotels} />
         <BookingForm hotels={hotels} />
       </>
