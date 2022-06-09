@@ -1,12 +1,12 @@
 Login info for admin:  
-- Email :admin@admin.com 
+- Email : admin@admin.com 
 - Password: admin123
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Holidaze - Hotel Booking
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+<img src="/holidaze-1.png" />
 
 ## Description
 
@@ -17,7 +17,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Built With
 
 - NextJS
-- [Bootstrap](https://getbootstrap.com)
+- Bootstrap
 - Sass
 - Strapi
 - Heroku
