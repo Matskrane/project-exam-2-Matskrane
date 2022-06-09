@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Holidaze - Hotel Booking
 
-<Image src="/holidaze-1.png" width="300"/>
+<img src="/public/holidaze-1.png" width="300"/>
 
 ## Description
 
