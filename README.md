@@ -1,6 +1,26 @@
-Login: admin@admin.com, admin123
+Login info for admin:  
+- Email :admin@admin.com 
+- Password: admin123
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Holidaze - Hotel Booking
+
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+
+## Description
+
+- Make a Hotel booking website located in Bergen
+- An Admin page using jwt tokens.
+- Using strapi api as backend for the project connected to Heroku.
+
+## Built With
+
+- NextJS
+- [Bootstrap](https://getbootstrap.com)
+- Sass
+- Strapi
+- Heroku
 
 ## Getting Started
 
