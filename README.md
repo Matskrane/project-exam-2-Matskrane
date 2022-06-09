@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Holidaze - Hotel Booking
 
-<img src="/holidaze-1.png" />
+<Image src="/holidaze-1.png" title="hover text"/>
 
 ## Description
 
