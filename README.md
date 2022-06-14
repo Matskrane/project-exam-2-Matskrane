@@ -2,6 +2,8 @@ Login info for admin:
 - Email : admin@admin.com 
 - Password: admin123
 
+Live Demo: https://project-exam-2-matskranes.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Holidaze - Hotel Booking
